@@ -159,7 +159,7 @@
     "saved": "프로젝트 기본값이 저장되었습니다",
     "projectDefaults": "프로젝트 기본값",
     "mcpEnabled": "새 프로젝트에서 MCP 활성화",
-    "mcpEnabledHint": "새 프로젝트를 생성하면 즉시 해당 팀의 MCP에서 접근할 수 있습니다."
+    "mcpEnabledHint": "새 프로젝트는 생성되는 즉시 해당 팀의 MCP 접근 범위에 포함됩니다."
   },
   "authentication": {
     "saved": "인증 설정이 저장되었습니다",
@@ -217,7 +217,7 @@
     "botConfigured": "사용자는 프로필에서 이 봇과의 채팅을 열어 Telegram 계정을 연결할 수 있습니다.",
     "botMissing": "Telegram에서 @BotFather를 사용해 봇을 생성한 후 토큰을 여기에 붙여넣으세요.",
     "botToken": "봇 토큰",
-    "botTokenHint": "저장할 때 Telegram을 통해 토큰을 확인하므로 잘못된 토큰은 나중에 조용히 실패하지 않고 즉시 거부됩니다.",
+    "botTokenHint": "저장할 때 Telegram에서 토큰이 유효한지 확인합니다. 잘못된 토큰은 이 화면에서 거부됩니다.",
     "resolvedHint": "토큰에서 확인된 정보입니다. 계정을 연결할 때 사용자에게 표시되는 봇입니다."
   },
   "email": {

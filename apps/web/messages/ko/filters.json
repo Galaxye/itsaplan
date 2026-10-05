@@ -16,7 +16,7 @@
   },
   "boolean": {
     "true": "예",
-    "false": "아니오"
+    "false": "아니요"
   },
   "cycleStatus": {
     "active": "진행 중인 사이클",

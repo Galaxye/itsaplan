@@ -408,8 +408,8 @@
     "cliHint": "<link>GitHub CLI</link>가 필요합니다. <code>{placeholder}</code>를 저장소로 바꾼 다음 터미널에서 실행하세요.",
     "gitlabCliHint": "<link>GitLab CLI</link>가 필요합니다. 저장소 디렉터리에서 이 명령을 실행하세요.",
     "commandCopied": "명령이 복사되었습니다. owner/repo를 바꾼 다음 실행하세요.",
-    "nativeConnections": "공급자 연결",
-    "nativeConnectionsRecommended": "공급자 연결 · 권장",
+    "nativeConnections": "Git 공급자 연결",
+    "nativeConnectionsRecommended": "Git 공급자 연결 · 권장",
     "nativeConnectionsHint": "Git 공급자를 인증하고 저장소를 선택하면 Plan이 웹훅을 설정합니다.",
     "nativeConnectProvider": "{provider} 연결",
     "nativeNoConnections": "아직 연결된 공급자 계정이 없습니다. 아래에서 웹훅을 직접 설정할 수도 있습니다.",
@@ -522,10 +522,10 @@
       "failed": "실패"
     },
     "phases": {
-      "discover": "검색 중",
+      "discover": "발견 중",
       "create": "생성 중",
       "link": "연결 중",
-      "rewrite": "변환 중",
+      "rewrite": "참조 재작성 중",
       "attachments": "첨부 파일",
       "done": "완료"
     },

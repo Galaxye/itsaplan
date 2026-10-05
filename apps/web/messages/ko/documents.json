@@ -126,7 +126,7 @@
   "apiRequired": "API 필요",
   "export": "내보내기",
   "exportTitle": "페이지 내보내기",
-  "exportDescription": "현재 페이지의 이동 가능한 사본을 다운로드합니다.",
+  "exportDescription": "현재 페이지의 사본을 다운로드합니다.",
   "exportFormat": "내보내기 형식",
   "markdown": "Markdown",
   "markdownExportHint": ".md 파일로 다운로드됩니다. 페이지에 보호된 파일이 포함된 경우 .zip 파일로 함께 묶입니다.",

@@ -13,7 +13,7 @@
     "teamsHeading": "팀 및 프로젝트",
     "renamedRoles": "이름이 변경된 역할",
     "renamedSkills": "이름이 변경된 스킬",
-    "renamedAgents": "이름이 변경된 AI 에이전트 핸들",
+    "renamedAgents": "이름이 변경된 AI 에이전트 사용자 이름",
     "renamedCredentials": "라벨이 변경된 연동 인증 정보",
     "mergedHeading": "병합 및 이동",
     "mergedRoles": "{count, plural, one {중복된 기본 역할 #개가 하나로 병합됨} other {중복된 기본 역할 #개가 하나로 병합됨}}",

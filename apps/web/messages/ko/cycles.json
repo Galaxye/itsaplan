@@ -13,7 +13,7 @@
   "columns": {
     "name": "이름",
     "dates": "기간",
-    "length": "길이",
+    "length": "기간",
     "issues": "이슈",
     "progress": "진행률"
   },

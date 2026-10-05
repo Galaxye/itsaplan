@@ -22,7 +22,7 @@
     "reached": "{column}의 이슈가 제한인 {limit}개에 도달했습니다.",
     "tooltip": "진행 중 작업 제한: {max}",
     "count": "{count} / {max}",
-    "filteredCount": "{shown} / {total} / {max}",
+    "filteredCount": "전체 {total} 중 {shown}개 표시 / 제한 {max}",
     "filteredTooltip": "현재 필터에 따라 {shown}개가 표시됩니다. 제한 {max}개는 이 열의 전체 이슈 {total}개를 기준으로 적용됩니다."
   },
   "columns": {
