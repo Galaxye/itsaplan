@@ -1,4 +1,5 @@
 {
+  "archived": "보관됨",
   "create": {
     "title": "새 팀",
     "namePlaceholder": "팀 이름",
@@ -9,6 +10,8 @@
     "submit": "팀 생성"
   },
   "sections": {
+    "collapse": "섹션 접기",
+    "expand": "섹션 펼치기",
     "info": {
       "title": "정보",
       "description": "팀 정보와 팀에서의 내 역할을 확인합니다."
@@ -26,7 +29,7 @@
       "description": "팀의 모든 프로젝트에서 사용할 역할을 관리합니다."
     },
     "notifications": {
-      "title": "알림 공급자",
+      "title": "알림 서비스",
       "description": "팀 프로젝트에서 이메일과 Telegram 알림을 전송하는 방법을 설정합니다."
     },
     "integrations": {
@@ -201,10 +204,10 @@
     "ownerOnly": "팀 소유자만 알림 공급자를 관리할 수 있습니다.",
     "email": "이메일",
     "telegram": "Telegram",
-    "emailProvider": "이메일 공급자",
-    "emailProviderHint": "시스템 공급자 또는 팀에서 설정한 공급자를 통해 전송합니다. 인증 정보는 암호화되어 저장됩니다.",
+    "emailProvider": "이메일 서비스 공급자",
+    "emailProviderHint": "시스템 서비스 공급자 또는 팀에서 설정한 공급자를 통해 전송합니다. 인증 정보는 암호화되어 저장됩니다.",
     "systemAvailable": "이 인스턴스에 설정된 공급자를 통해 알림이 전송됩니다. 여기에는 별도의 인증 정보가 필요하지 않습니다.",
-    "systemUnavailable": "인스턴스 공급자를 사용할 수 없습니다. 관리자에게 공급자를 설정하고 팀과 공유하도록 요청하거나 이 팀의 공급자를 직접 설정하세요.",
+    "systemUnavailable": "인스턴스 공급자를 사용할 수 없습니다. 관리자에게 서비스 공급자를 설정하고 팀과 공유하도록 요청하거나 이 팀의 서비스 공급자를 직접 설정하세요.",
     "host": "호스트",
     "port": "포트",
     "encryption": "암호화",
@@ -220,10 +223,10 @@
     "optional": "선택 사항",
     "apiKey": "API 키",
     "telegramBot": "Telegram 봇",
-    "telegramBotHint": "팀의 모든 프로젝트에서 알림을 전송하는 봇입니다. 멤버는 환경 설정에서 자신의 채팅을 선택합니다. 토큰은 암호화되어 저장됩니다.",
+    "telegramBotHint": "팀의 모든 프로젝트에서 알림을 전송하는 봇입니다. 멤버는 각자의 환경 설정에서 자신의 채팅을 선택합니다. 토큰은 암호화되어 저장됩니다.",
     "botToken": "봇 API 토큰 (선택 사항)",
-    "emailSaved": "이메일 공급자가 저장되었습니다",
-    "telegramSaved": "Telegram 공급자가 저장되었습니다"
+    "emailSaved": "이메일 서비스 공급자가 저장되었습니다",
+    "telegramSaved": "Telegram 서비스 공급자가 저장되었습니다"
   },
   "integrations": {
     "noAccess": "이 팀의 연동에 접근할 수 없습니다.",
@@ -538,5 +541,106 @@
     "projectsHint": "새 프로젝트에는 인스턴스 기본값이 적용됩니다.",
     "noProjects": "아직 이 팀에 프로젝트가 없습니다.",
     "projectToggleAria": "{project}의 MCP 접근 전환"
+  },
+  "workspace": {
+    "rail": "워크스페이스",
+    "create": "새 워크스페이스",
+    "createUnavailableTitle": "워크스페이스 추가",
+    "createUnavailableHint": "사용자당 여러 워크스페이스는 Cloud 및 셀프 호스팅 Pro에서 사용할 수 있습니다.",
+    "general": "일반",
+    "roles": {
+      "owner": "소유자",
+      "admin": "관리자"
+    },
+    "info": {
+      "title": "워크스페이스",
+      "description": "팀을 소유하는 워크스페이스입니다.",
+      "workspace": "워크스페이스",
+      "workspaceHint": "이 워크스페이스의 모든 사용자에게 표시되는 이름입니다.",
+      "role": "내 역할",
+      "saved": "워크스페이스가 저장되었습니다",
+      "color": "색상",
+      "colorReset": "기본값 사용"
+    },
+    "teamCreation": {
+      "title": "팀 생성 권한",
+      "description": "팀을 생성한 사용자가 해당 팀의 소유자가 됩니다.",
+      "ownerOnly": "팀 생성 권한은 워크스페이스 소유자만 변경할 수 있습니다.",
+      "owner": "소유자만",
+      "managers": "소유자 및 관리자",
+      "members": "워크스페이스 내의 모든 팀 멤버"
+    },
+    "managers": {
+      "title": "관리자",
+      "description": "소유자와 관리자가 워크스페이스를 관리합니다.",
+      "ownerOnly": "소유자와 관리자가 워크스페이스를 관리합니다. 관리자를 추가하거나 제거할 수 있는 사람은 소유자뿐입니다.",
+      "person": "사용자",
+      "role": "역할",
+      "addAction": "관리자 추가",
+      "addTitle": "관리자 추가",
+      "addDescription": "워크스페이스 내의 팀 멤버를 선택하세요.",
+      "search": "이름 또는 이메일로 검색",
+      "noCandidates": "추가할 사용자가 없습니다",
+      "added": "{name}님이 관리자가 되었습니다",
+      "removeAction": "관리자에서 제거",
+      "removeTitle": "{name}님을 관리자에서 제거하시겠습니까?",
+      "removeDescription": "팀에는 계속 남아 있지만 워크스페이스를 관리할 수 없게 됩니다.",
+      "removed": "{name}님이 더 이상 관리자가 아닙니다"
+    },
+    "scim": {
+      "title": "SCIM",
+      "description": "ID 공급자가 이 워크스페이스에 사용자를 추가하거나 제거하고, 그룹을 통해 프로젝트 접근 권한을 부여할 수 있도록 설정합니다.",
+      "saved": "SCIM 설정이 저장되었습니다",
+      "provisioning": "프로비저닝",
+      "provisioningConfigured": "ID 공급자가 이 워크스페이스에 사용자를 추가하고 제거합니다.",
+      "provisioningInstance": "ID 공급자가 이 인스턴스의 계정을 생성, 업데이트 및 비활성화합니다.",
+      "provisioningMissing": "먼저 토큰을 생성하세요.",
+      "token": "토큰",
+      "noToken": "아직 생성된 토큰이 없습니다",
+      "tokenHint": "ID 공급자가 전송하는 Bearer 토큰입니다. 한 번만 표시되며 새 토큰을 생성하면 기존 토큰은 더 이상 사용할 수 없습니다.",
+      "generateToken": "토큰 생성",
+      "replaceToken": "토큰 교체",
+      "baseUrl": "SCIM 엔드포인트",
+      "baseUrlHint": "ID 공급자에 이 주소를 지정하세요.",
+      "copyBaseUrl": "SCIM 엔드포인트 복사",
+      "groups": "그룹",
+      "groupsHint": "ID 공급자가 전송한 그룹입니다. 그룹 목록은 ID 공급자에서 관리하며, 각 그룹에 부여할 권한은 여기에서 설정합니다.",
+      "groupsEmpty": "아직 전송된 그룹이 없습니다.",
+      "memberCount": "{count, plural, =0 {멤버 없음} one {멤버 #명} other {멤버 #명}}",
+      "grantsNothing": "아직 부여된 권한 없음",
+      "editMappings": "접근 권한 편집",
+      "roleOwner": "소유자",
+      "roleMember": "멤버",
+      "tokenDialog": {
+        "title": "SCIM 토큰 생성",
+        "description": "토큰은 한 번만 표시되며 다시 확인할 수 없습니다. 기존에 사용 중인 토큰은 즉시 더 이상 사용할 수 없게 됩니다.",
+        "submit": "생성",
+        "submitPending": "생성 중…",
+        "createdTitle": "SCIM 토큰",
+        "createdDescription": "지금 ID 공급자에 복사하세요. 이 토큰은 다시 확인할 수 없습니다.",
+        "copy": "토큰 복사"
+      },
+      "mappings": {
+        "title": "{group} 그룹의 권한",
+        "description": "이 그룹의 멤버는 아래 프로젝트에 참여합니다. 프로젝트를 제거하면 이 그룹을 통해 부여된 해당 프로젝트 멤버십도 제거됩니다.",
+        "empty": "이 그룹에는 아직 부여된 권한이 없습니다.",
+        "addProject": "프로젝트 추가…",
+        "role": "역할",
+        "roleOwner": "소유자",
+        "roleMember": "멤버",
+        "projectRole": "프로젝트 역할",
+        "defaultRole": "기본 역할",
+        "remove": "프로젝트 제거",
+        "saved": "그룹 접근 권한이 저장되었습니다"
+      }
+    },
+    "delete": {
+      "action": "워크스페이스 삭제",
+      "hint": "워크스페이스를 삭제하면 소속 팀도 함께 삭제됩니다. 사용자의 계정과 다른 팀은 유지됩니다.",
+      "blocked": "먼저 소속 팀의 프로젝트와 AI 에이전트를 삭제하세요.",
+      "title": "{name} 워크스페이스를 삭제하시겠습니까?",
+      "description": "<strong>{name}</strong> 워크스페이스와 소속 팀이 삭제됩니다. 사용자의 계정과 다른 팀은 유지됩니다. 이 작업은 되돌릴 수 없습니다.",
+      "deleted": "워크스페이스가 삭제되었습니다"
+    }
   }
 }

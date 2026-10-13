@@ -64,6 +64,8 @@
     "noHiddenResults": "검색 조건과 일치하는 숨긴 프로젝트가 없습니다",
     "noVisibleProjects": "표시할 프로젝트가 없습니다",
     "hintMove": "이동",
-    "hintOpen": "열기"
+    "hintOpen": "열기",
+    "workspaces": "워크스페이스",
+    "workspaceSettings": "워크스페이스 설정"
   }
 }

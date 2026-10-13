@@ -57,6 +57,7 @@
     "deleteConfirm": "계정 삭제",
     "deleteConfirmWithProjects": "{count, plural, one {계정 및 프로젝트 삭제} other {계정 및 프로젝트 삭제}}",
     "deleteMessage": "<strong>{name}</strong> 계정은 이 인스턴스에 더 이상 접근할 수 없습니다. 이 계정이 작성한 이슈와 댓글은 유지되며 작성자는 지정되지 않은 상태가 됩니다. 이 작업은 되돌릴 수 없습니다.",
+    "deleteWorkspaceNote": "이 계정이 소유한 워크스페이스에 프로젝트와 AI 에이전트가 없으면 계정과 함께 삭제됩니다. 그렇지 않으면 해당 계정이 단독으로 소유하던 항목과 함께 워크스페이스 소유권이 나에게 이전됩니다.",
     "soleOwnerTitle": "{count, plural, one {프로젝트의 유일한 소유자} other {#개 프로젝트의 유일한 소유자}}",
     "soleOwnerHint": "{count, plural, one {이 계정을 삭제하면 해당 프로젝트를 관리할 수 있는 사람이 없습니다.} other {이 계정을 삭제하면 해당 프로젝트들을 관리할 수 있는 사람이 없습니다.}}",
     "deleteWithProjects": "{count, plural, one {계정과 함께 프로젝트 삭제} other {계정과 함께 프로젝트 삭제}}",
@@ -159,7 +160,11 @@
     "saved": "프로젝트 기본값이 저장되었습니다",
     "projectDefaults": "프로젝트 기본값",
     "mcpEnabled": "새 프로젝트에서 MCP 활성화",
-    "mcpEnabledHint": "새 프로젝트는 생성되는 즉시 해당 팀의 MCP 접근 범위에 포함됩니다."
+    "mcpEnabledHint": "새 프로젝트는 생성되는 즉시 해당 팀의 MCP 접근 범위에 포함됩니다.",
+    "workspacesSaved": "워크스페이스 설정이 저장되었습니다.",
+    "workspaces": "워크스페이스",
+    "personalWorkspaces": "모든 사용자에게 워크스페이스 제공",
+    "personalWorkspacesHint": "각 계정에 사용자 이름을 딴 개인 워크스페이스가 하나씩 생성됩니다. 끄면 사용자는 자신이 추가된 워크스페이스에서만 작업할 수 있습니다."
   },
   "authentication": {
     "saved": "인증 설정이 저장되었습니다",
@@ -221,8 +226,8 @@
     "resolvedHint": "토큰에서 확인된 정보입니다. 계정을 연결할 때 사용자에게 표시되는 봇입니다."
   },
   "email": {
-    "saved": "이메일 공급자 설정이 저장되었습니다",
-    "provider": "이메일 공급자",
+    "saved": "이메일 서비스 공급자 설정이 저장되었습니다",
+    "provider": "이메일 서비스 공급자",
     "providerHint": "하나의 공급자를 선택하세요. 인증 정보는 암호화되어 저장됩니다.",
     "from": "발신 주소",
     "fromHint": "Resend에서는 필수입니다. SMTP에서는 기본적으로 사용자 이름이 사용됩니다.",
@@ -269,49 +274,5 @@
     "scopes": "스코프",
     "scopesHint": "공백으로 구분합니다. openid는 필수이며 profile과 email을 사용하면 이름과 이메일 주소를 가져올 수 있습니다.",
     "oidcRedirectUriHint": "ID 공급자의 클라이언트에 이 주소를 리디렉션 URI로 등록하세요. 정확히 일치하지 않으면 공급자에서 로그인을 거부합니다."
-  },
-  "scim": {
-    "saved": "SCIM 설정이 저장되었습니다",
-    "provisioning": "프로비저닝",
-    "provisioningConfigured": "ID 공급자가 이 인스턴스의 계정을 생성, 업데이트 및 비활성화합니다.",
-    "provisioningMissing": "먼저 토큰을 생성하세요.",
-    "token": "토큰",
-    "noToken": "아직 생성된 토큰이 없습니다",
-    "tokenHint": "ID 공급자가 전송하는 Bearer 토큰입니다. 한 번만 표시되며 새 토큰을 생성하면 기존 토큰은 더 이상 작동하지 않습니다.",
-    "generateToken": "토큰 생성",
-    "replaceToken": "토큰 교체",
-    "baseUrl": "SCIM 엔드포인트",
-    "baseUrlHint": "ID 공급자에 이 주소를 설정하세요.",
-    "copyBaseUrl": "SCIM 엔드포인트 복사",
-    "groups": "그룹",
-    "groupsHint": "ID 공급자가 전송한 그룹입니다. 그룹 목록은 ID 공급자에서 관리하며, 각 그룹에 부여할 접근 권한은 여기에서 설정합니다.",
-    "groupsEmpty": "아직 전송된 그룹이 없습니다.",
-    "memberCount": "{count, plural, =0 {멤버 없음} one {멤버 #명} other {멤버 #명}}",
-    "grantsNothing": "아직 부여된 권한 없음",
-    "editMappings": "접근 권한 편집",
-    "roleOwner": "소유자",
-    "roleMember": "멤버",
-    "tokenDialog": {
-      "title": "SCIM 토큰 생성",
-      "description": "토큰은 한 번만 표시되며 다시 확인할 수 없습니다. 이미 사용 중인 토큰이 있다면 더 이상 작동하지 않습니다.",
-      "submit": "생성",
-      "submitPending": "생성 중…",
-      "createdTitle": "SCIM 토큰",
-      "createdDescription": "지금 ID 공급자에 복사해 두세요. 이 토큰은 다시 표시되지 않습니다.",
-      "copy": "토큰 복사"
-    },
-    "mappings": {
-      "title": "{group}에서 부여하는 권한",
-      "description": "이 그룹의 멤버는 여기에 등록된 프로젝트에 참여합니다. 프로젝트를 제거하면 이 그룹을 통해 부여된 해당 프로젝트의 멤버십도 제거됩니다.",
-      "empty": "이 그룹에는 아직 부여된 권한이 없습니다.",
-      "addProject": "프로젝트 추가…",
-      "role": "역할",
-      "roleOwner": "소유자",
-      "roleMember": "멤버",
-      "projectRole": "프로젝트 역할",
-      "defaultRole": "기본 역할",
-      "remove": "프로젝트 제거",
-      "saved": "그룹 접근 권한이 저장되었습니다"
-    }
   }
 }

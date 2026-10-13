@@ -209,7 +209,7 @@
     "previous": "이전 페이지",
     "next": "다음 페이지",
     "page": "{number}페이지",
-    "perPage": "페이지당",
+    "perPage": "개씩 보기",
     "range": "전체 {total}개 중 {first}-{last}"
   }
 }
