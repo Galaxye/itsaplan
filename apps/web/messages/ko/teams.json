@@ -51,6 +51,10 @@
     "agents": {
       "title": "AI 에이전트",
       "description": "이 팀이 소유한 AI 에이전트와 각 에이전트가 작업하는 프로젝트를 관리합니다."
+    },
+    "analytics": {
+      "title": "사용량",
+      "description": "팀의 AI 에이전트가 모델 사용에 소비한 비용을 에이전트, 프로젝트 및 날짜별로 확인합니다."
     }
   },
   "info": {
@@ -64,7 +68,15 @@
     "leads": "소유자 및 관리자",
     "leadsHint": "이 팀과 팀의 프로젝트를 관리할 수 있는 사용자입니다.",
     "saved": "팀이 저장되었습니다",
-    "leaveHint": "내가 멤버로 참여 중인 프로젝트는 계속 유지됩니다. 팀에 다시 참여하려면 소유자가 나를 다시 추가해야 합니다."
+    "leaveHint": "내가 멤버로 참여 중인 프로젝트는 계속 유지됩니다. 팀에 다시 참여하려면 소유자가 나를 다시 추가해야 합니다.",
+    "delete": {
+      "action": "팀 삭제",
+      "hint": "팀을 삭제하면 멤버, 역할, 초대, 스킬, 도구 및 연동도 함께 삭제됩니다. 사용자의 계정과 다른 팀은 유지됩니다.",
+      "blocked": "먼저 이 팀의 프로젝트와 AI 에이전트를 삭제하세요.",
+      "title": "{name} 팀을 삭제하시겠습니까?",
+      "description": "<strong>{name}</strong> 팀과 멤버, 역할, 초대, 스킬, 도구 및 연동이 삭제됩니다. 사용자의 계정과 다른 팀은 유지됩니다. 이 작업은 되돌릴 수 없습니다.",
+      "deleted": "팀이 삭제되었습니다"
+    }
   },
   "columns": {
     "project": "프로젝트",
@@ -454,6 +466,11 @@
     "searchTools": "도구 검색",
     "advanced": "고급",
     "advancedHint": "샘플링, 단계 제한 및 메모리",
+    "reasoningEffort": "추론 수준",
+    "reasoningEffortDefault": "공급자 기본값",
+    "reasoningEffortLow": "낮음",
+    "reasoningEffortMedium": "중간",
+    "reasoningEffortHigh": "높음",
     "temperature": "Temperature",
     "optional": "선택 사항",
     "maxSteps": "최대 단계 수",
@@ -552,6 +569,10 @@
       "owner": "소유자",
       "admin": "관리자"
     },
+    "titles": {
+      "owner": "워크스페이스 소유자",
+      "admin": "워크스페이스 관리자"
+    },
     "info": {
       "title": "워크스페이스",
       "description": "팀을 소유하는 워크스페이스입니다.",
@@ -641,6 +662,53 @@
       "title": "{name} 워크스페이스를 삭제하시겠습니까?",
       "description": "<strong>{name}</strong> 워크스페이스와 소속 팀이 삭제됩니다. 사용자의 계정과 다른 팀은 유지됩니다. 이 작업은 되돌릴 수 없습니다.",
       "deleted": "워크스페이스가 삭제되었습니다"
+    },
+    "agentUsage": {
+      "title": "AI 사용량",
+      "description": "모든 팀의 AI 에이전트가 모델 사용에 소비한 비용입니다."
+    },
+    "settingsGroup": "설정",
+    "modelPrices": {
+      "title": "모델 가격",
+      "description": "AI 사용 비용은 모델별 100만 토큰당 가격을 기준으로 계산됩니다. 가격을 변경하면 이전 호출 비용도 다시 계산됩니다.",
+      "used": {
+        "title": "이 워크스페이스에서 사용됨",
+        "description": "최근 90일 동안 AI 에이전트가 호출한 모델과 직접 가격을 설정한 모델입니다.",
+        "unpriced": "{count, plural, one {가격이 설정되지 않은 모델 #개는 비용 계산에서 제외됩니다.} other {가격이 설정되지 않은 모델 #개는 비용 계산에서 제외됩니다.}}",
+        "empty": "최근 90일 동안 모델 호출 기록이 없습니다. AI 에이전트가 모델을 호출하면 여기에 표시됩니다."
+      },
+      "all": {
+        "title": "모든 모델",
+        "description": "기본 제공 가격입니다. 각 모델에 직접 가격을 설정할 수 있습니다.",
+        "search": "모델 검색",
+        "noMatch": "“{query}”과(와) 일치하는 모델이 없습니다."
+      },
+      "columns": {
+        "model": "모델",
+        "calls": "호출",
+        "input": "입력",
+        "output": "출력",
+        "cacheRead": "캐시 읽기",
+        "cacheWrite": "캐시 쓰기",
+        "price": "가격"
+      },
+      "source": {
+        "own": "직접 설정",
+        "builtIn": "기본 제공",
+        "none": "가격 없음"
+      },
+      "setPrice": "가격 설정",
+      "edit": "편집",
+      "setTitle": "가격 설정",
+      "editTitle": "가격 편집",
+      "perMillion": "100만 토큰당 USD",
+      "builtInPrice": "기본 가격: 입력 {input}, 출력 {output}.",
+      "noBuiltInPrice": "이 모델에는 기본 가격이 없습니다.",
+      "sameAsInput": "입력과 동일",
+      "appliesToPast": "이 워크스페이스에서 발생한 이 모델의 모든 호출에 적용되며 이전 호출도 포함됩니다.",
+      "useBuiltIn": "기본 가격 사용",
+      "removePrice": "가격 제거",
+      "save": "가격 저장"
     }
   }
 }
